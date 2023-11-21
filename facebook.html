@@ -15,8 +15,7 @@
             min-height:100vh;
         }
         section{
-            border: 1px;
-           
+            border: 1px;     
             width: 50%;
         }
         .first-half{
@@ -32,8 +31,39 @@
         .first-half p{
             font-size: 20px;
         }
-    </style>
-    <style>
+        @media only screen and (max-width: 850px) {
+            body{
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                height: 100vh;
+                justify-content: center;
+            }
+            section{
+                width: unset;
+                min-height: unset;
+            }
+            .first-half{
+                width: 350px;
+                padding: unset;
+            }
+            .first-half h1{
+                text-align: center;
+            }
+        }
+        @media only screen and (min-width: 270px) and (max-width: 430px){
+            .first-half{
+                width: 70%;
+            }
+            .first-half p{
+                text-align: center;
+            }
+            .second-half form{
+                min-width: unset;
+            }
+        }
+       
+
         form {
             margin: auto;
             border: 1px;
@@ -43,6 +73,7 @@
             box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.801);
             padding: 20px;
             border-radius: 10px;
+            min-width: 350px;
         }
         .second-half{
             display: flex;
@@ -50,8 +81,7 @@
             align-items: center;
         }
         form > *{
-            min-height: 40px;
-            min-width: 350px;
+            min-width: 100%;
             text-align: center;
         }
         input{
@@ -64,6 +94,7 @@
             color: white;
             border: none;
             border-radius: 5px;
+            padding: 10px;
         }
         .green-button{
             background-color: #42b72a;
